@@ -1,0 +1,19 @@
+{
+  "name": "telegram-dsh-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot bridge for DeepSeek Harness - control DSH from Telegram",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "telegraf": "^4.16.3",
+    "dotenv": "^16.4.5",
+    "undici": "^6.21.0"
+  }
+}

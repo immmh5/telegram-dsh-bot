@@ -1,0 +1,22 @@
+# render.yaml - Render.com Blueprint
+# Deploy this bot to Render.com automatically
+
+services:
+  - type: web
+    name: telegram-dsh-bot
+    env: docker
+    region: singapore
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: DEEP_SEEK_API_KEY
+        sync: false
+      - key: DSH_MODEL
+        value: deepseek-chat
+      - key: NODE_ENV
+        value: production
+      - key: SESSIONS_DIR
+        value: /app/sessions
